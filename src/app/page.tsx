@@ -1,113 +1,113 @@
+import { Gamepad2, Github, Instagram, Linkedin, Twitter } from 'lucide-react'
 import Image from 'next/image'
+import Link from 'next/link'
+import React from 'react'
+import mayPhoto from '@/Images/photo-perfil.jpeg'
+import Cards from '@/Components/Cards/Cards'
+import ImgMobileNSolucoes from '@/Images/ns_soluçoes-smartphone.png'
+import ImgDesktopNSolucoes from '@/Images/ns_soluçoes-notbook.png'
+import ImgMobileTransforms from '@/Images/img_transforms-smartphone.png'
+import ImgDesktopTransforms from '@/Images/img_tranforms-notbook.png'
+import ImgMobileBlog from '@/Images/blog-smartphone.png'
+import ImgDesktopBlog from '@/Images/blog-notbook.png'
 
-export default function Home() {
+
+const page = () => {
   return (
-    <main className="flex min-h-screen flex-col items-center justify-between p-24">
-      <div className="z-10 max-w-5xl w-full items-center justify-between font-mono text-sm lg:flex">
-        <p className="fixed left-0 top-0 flex w-full justify-center border-b border-gray-300 bg-gradient-to-b from-zinc-200 pb-6 pt-8 backdrop-blur-2xl dark:border-neutral-800 dark:bg-zinc-800/30 dark:from-inherit lg:static lg:w-auto  lg:rounded-xl lg:border lg:bg-gray-200 lg:p-4 lg:dark:bg-zinc-800/30">
-          Get started by editing&nbsp;
-          <code className="font-mono font-bold">src/app/page.tsx</code>
-        </p>
-        <div className="fixed bottom-0 left-0 flex h-48 w-full items-end justify-center bg-gradient-to-t from-white via-white dark:from-black dark:via-black lg:static lg:h-auto lg:w-auto lg:bg-none">
-          <a
-            className="pointer-events-none flex place-items-center gap-2 p-8 lg:pointer-events-auto lg:p-0"
-            href="https://vercel.com?utm_source=create-next-app&utm_medium=appdir-template&utm_campaign=create-next-app"
-            target="_blank"
-            rel="noopener noreferrer"
-          >
-            By{' '}
-            <Image
-              src="/vercel.svg"
-              alt="Vercel Logo"
-              className="dark:invert"
-              width={100}
-              height={24}
-              priority
-            />
-          </a>
-        </div>
-      </div>
+    <>
+      <header className='container'>
+        <nav className='nav_bar'>
+          <Gamepad2 />
+          <ul className=''>
+            <li>
+              <Link href='https://www.linkedin.com/in/nat%C3%A3martins/' target='_blank'>
+                <Linkedin />
+              </Link>
+            </li>
+            <li>
+              <Link href='https://github.com/natamartins' target='_blank'>
+                <Github />
+              </Link>
+            </li>
+            <li>
+              <Link href='https://www.instagram.com/nata.codedevjr/?theme=dark' target='_blank'>
+                <Instagram />
+              </Link>
+            </li>
+            <li>
+              <Link href='https://twitter.com/NataCodedev' target='_blank'>
+                <Twitter />
+              </Link>
+            </li>
+          </ul>
+        </nav>
+      </header>
+      <main className='container'>
+        <section className='contant_about-me'>
+          <Image width={150} src={mayPhoto} alt='' />
+          <div>
+            <p>Olá, eu sou o Natã Martins!</p>
+            <h1>React Developer</h1>
+            <p>Tenho 19 anos, sou desenvolvedor</p>
+            <p>Front-end a mais de 2 anos.</p>
+          </div>
+        </section>
+        <section className='contant_projects'>
+          <h2>Projetos</h2>
+          <div className='card_all-projects'>
 
-      <div className="relative flex place-items-center before:absolute before:h-[300px] before:w-[480px] before:-translate-x-1/2 before:rounded-full before:bg-gradient-radial before:from-white before:to-transparent before:blur-2xl before:content-[''] after:absolute after:-z-20 after:h-[180px] after:w-[240px] after:translate-x-1/3 after:bg-gradient-conic after:from-sky-200 after:via-blue-200 after:blur-2xl after:content-[''] before:dark:bg-gradient-to-br before:dark:from-transparent before:dark:to-blue-700 before:dark:opacity-10 after:dark:from-sky-900 after:dark:via-[#0141ff] after:dark:opacity-40 before:lg:h-[360px] z-[-1]">
-        <Image
-          className="relative dark:drop-shadow-[0_0_0.3rem_#ffffff70] dark:invert"
-          src="/next.svg"
-          alt="Next.js Logo"
-          width={180}
-          height={37}
-          priority
-        />
-      </div>
+            <div className='container_projects-nsoluçoes'>
+              <div>
+                <h3>NSoluções</h3>
+                <p>
+                  Projeto criado com Next.js, é um projeto pessoal que
+                  criei para desenvolver minhas habilidade com o framework
+                  Next.js, web responsive e Google ADS e para o deploy
+                </p>
+                <div className='card_links'>
+                  <Link href='https://nsolucoes.netlify.app/' target='_blank'>Site</Link>
+                  <Link href='https://github.com/natamartins/mycompany' target='_blank'>Github</Link>
+                </div>
+              </div>
+              <Cards mobile={ImgMobileNSolucoes} desktop={ImgDesktopNSolucoes} />
+            </div>
 
-      <div className="mb-32 grid text-center lg:max-w-5xl lg:w-full lg:mb-0 lg:grid-cols-4 lg:text-left">
-        <a
-          href="https://nextjs.org/docs?utm_source=create-next-app&utm_medium=appdir-template&utm_campaign=create-next-app"
-          className="group rounded-lg border border-transparent px-5 py-4 transition-colors hover:border-gray-300 hover:bg-gray-100 hover:dark:border-neutral-700 hover:dark:bg-neutral-800/30"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          <h2 className={`mb-3 text-2xl font-semibold`}>
-            Docs{' '}
-            <span className="inline-block transition-transform group-hover:translate-x-1 motion-reduce:transform-none">
-              -&gt;
-            </span>
-          </h2>
-          <p className={`m-0 max-w-[30ch] text-sm opacity-50`}>
-            Find in-depth information about Next.js features and API.
-          </p>
-        </a>
+            <div className='container_projects-trasforms'>
+              <Cards mobile={ImgMobileTransforms} desktop={ImgDesktopTransforms} />
+              <div>
+                <h3>Tmovies</h3>
+                <p>
+                  Este  é um projeto pessoal que criei para aprimorar minha
+                  habilidades com React.js. É um site de filmes e séries, onde
+                  mostra os trailers dos filmes e séries que já lançaram e que
+                  vão lançar! e para o deploy Netlify
+                </p>
+                <div className='card_links'>
+                  <Link href='https://webtmovies.netlify.app/' target='_blank'>Site</Link>
+                  <Link href='https://github.com/natamartins/webtmovies' target='_blank'>Github</Link>
+                </div>
+              </div>
+            </div>
 
-        <a
-          href="https://nextjs.org/learn?utm_source=create-next-app&utm_medium=appdir-template-tw&utm_campaign=create-next-app"
-          className="group rounded-lg border border-transparent px-5 py-4 transition-colors hover:border-gray-300 hover:bg-gray-100 hover:dark:border-neutral-700 hover:dark:bg-neutral-800/30"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          <h2 className={`mb-3 text-2xl font-semibold`}>
-            Learn{' '}
-            <span className="inline-block transition-transform group-hover:translate-x-1 motion-reduce:transform-none">
-              -&gt;
-            </span>
-          </h2>
-          <p className={`m-0 max-w-[30ch] text-sm opacity-50`}>
-            Learn about Next.js in an interactive course with&nbsp;quizzes!
-          </p>
-        </a>
-
-        <a
-          href="https://vercel.com/templates?framework=next.js&utm_source=create-next-app&utm_medium=appdir-template&utm_campaign=create-next-app"
-          className="group rounded-lg border border-transparent px-5 py-4 transition-colors hover:border-gray-300 hover:bg-gray-100 hover:dark:border-neutral-700 hover:dark:bg-neutral-800/30"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          <h2 className={`mb-3 text-2xl font-semibold`}>
-            Templates{' '}
-            <span className="inline-block transition-transform group-hover:translate-x-1 motion-reduce:transform-none">
-              -&gt;
-            </span>
-          </h2>
-          <p className={`m-0 max-w-[30ch] text-sm opacity-50`}>
-            Explore the Next.js 13 playground.
-          </p>
-        </a>
-
-        <a
-          href="https://vercel.com/new?utm_source=create-next-app&utm_medium=appdir-template&utm_campaign=create-next-app"
-          className="group rounded-lg border border-transparent px-5 py-4 transition-colors hover:border-gray-300 hover:bg-gray-100 hover:dark:border-neutral-700 hover:dark:bg-neutral-800/30"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          <h2 className={`mb-3 text-2xl font-semibold`}>
-            Deploy{' '}
-            <span className="inline-block transition-transform group-hover:translate-x-1 motion-reduce:transform-none">
-              -&gt;
-            </span>
-          </h2>
-          <p className={`m-0 max-w-[30ch] text-sm opacity-50`}>
-            Instantly deploy your Next.js site to a shareable URL with Vercel.
-          </p>
-        </a>
-      </div>
-    </main>
+            <div className='container_projects-blog'>
+              <div>
+                <h3>Blog</h3>
+                <p>Este é meu blog pessao, onde posto artigos pessoais e profissionais</p>
+                <div className='card_links'>
+                  <Link href='https://nata-codedev-com-br.vercel.app/' target='_blank'>Site</Link>
+                  <Link href='https://github.com/natamartins/nata.codedev.com.br' target='_blank'>Github</Link>
+                </div>
+              </div>
+              <Cards mobile={ImgMobileBlog} desktop={ImgDesktopBlog} />
+            </div>
+          </div>
+        </section>
+      </main>
+      <footer className='card_footer'>
+        <p>©Natã Martins - 2023</p>
+      </footer>
+    </>
   )
 }
+
+export default page

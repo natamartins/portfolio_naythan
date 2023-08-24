@@ -1,0 +1,23 @@
+.nav_bar {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    margin-bottom: 3rem;
+
+    ul {
+        display: flex;
+        align-items: center;
+        gap: 1rem;
+
+        li {
+            a {
+                color: black;
+                animation: ease-in-out;
+
+                &:hover {
+                    color: #888;
+                }
+            }
+        }
+    }
+}

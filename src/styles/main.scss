@@ -124,6 +124,14 @@
     }
 
     .container_projects-nsoluçoes,
+    .container_projects-trasforms,
+    .container_projects-blog {
+        div:nth-child(2) {
+            width: 467px;
+        }
+    }
+
+    .container_projects-nsoluçoes
     .container_projects-blog {
         div:nth-child(2) {
             grid-row: 1;

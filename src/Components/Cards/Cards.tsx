@@ -4,12 +4,11 @@ import ImgModel from '@/Images/projects-preview.png'
 
 const Cards = ({ mobile, desktop }: any) => {
     return (
-        <div className='card_all-projects'>
+        <div className='card_all-projects-img'>
             <Image
                 src={ImgModel}
                 alt='Imagem dos projetos'
-                width={500}
-
+                className='img_projects'
             />
             <span>
                 <Image src={mobile} alt='' />

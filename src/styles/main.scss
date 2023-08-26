@@ -24,6 +24,11 @@
 
 }
 
+.img_projects {
+    width: 500px;
+    height: 274px;
+}
+
 .contant_projects {
     h2 {
         text-align: center;
@@ -31,7 +36,7 @@
     }
 }
 
-.card_all-projects {
+.card_all-projects-img {
     position: relative;
 
     span:nth-child(2) {
@@ -122,6 +127,41 @@
     .container_projects-blog {
         div:nth-child(2) {
             grid-row: 1;
+        }
+    }
+
+    .img_projects {
+        width: 380px;
+        height: 270px;
+    }
+
+    .card_all-projects {
+        position: relative;
+
+        span:nth-child(2) {
+            img {
+                position: absolute;
+                top: 0.4rem;
+                left: 3rem;
+
+                width: 4.7rem;
+                height: 13.2rem;
+                border-radius: 10px;
+                z-index: -1;
+            }
+        }
+
+        span:nth-child(3) {
+            img {
+                position: absolute;
+                top: 2.2rem;
+                left: 8.6rem;
+
+                width: 15.4rem;
+                height: 11.6rem;
+
+                z-index: -1;
+            }
         }
     }
 }
